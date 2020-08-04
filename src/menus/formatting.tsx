@@ -1,3 +1,4 @@
+import * as React from "react";
 import {
   BoldIcon,
   CodeIcon,
@@ -9,6 +10,7 @@ import {
   StrikethroughIcon,
   HighlightIcon,
 } from "outline-icons";
+import UnderlineIcon from "../icons/UnderlineIcon";
 import { isInTable } from "prosemirror-tables";
 import { EditorState } from "prosemirror-state";
 import isInList from "../queries/isInList";
@@ -34,6 +36,12 @@ export default function formattingMenuItems(state: EditorState): MenuItem[] {
       tooltip: "Italic",
       icon: ItalicIcon,
       active: isMarkActive(schema.marks.em),
+    },
+    {
+      name: "underline",
+      tooltip: "Underline",
+      icon: () => <UnderlineIcon size={24} color="#fff" />,
+      active: isMarkActive(schema.marks.underline),
     },
     {
       name: "strikethrough",

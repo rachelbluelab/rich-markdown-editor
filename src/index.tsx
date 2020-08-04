@@ -54,6 +54,7 @@ import Highlight from "./marks/Highlight";
 import Italic from "./marks/Italic";
 import Link from "./marks/Link";
 import Strikethrough from "./marks/Strikethrough";
+import UnderLine from "./marks/UnderLine";
 
 // plugins
 import BlockMenuTrigger from "./plugins/BlockMenuTrigger";
@@ -280,6 +281,7 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
         new Placeholder({
           placeholder: this.props.placeholder,
         }),
+        new UnderLine(),
         ...this.props.extensions,
       ],
       this
