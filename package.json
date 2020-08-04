@@ -2,7 +2,7 @@
   "name": "rich-markdown-editor",
   "description": "A rich text editor with Markdown shortcuts",
   "version": "10.4.0",
-  "main": "src/index.tsx",
+  "main": "dist/lib/index.js",
   "typings": "dist/@types/index.d.ts",
   "license": "BSD-3-Clause",
   "scripts": {
